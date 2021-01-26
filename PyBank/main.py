@@ -23,17 +23,18 @@ with open (budget_csv) as csvfile:
     for row in data:
         # print(row)
 
-        print("-------------------------")
-        print("Financial Analysis")
-        print("-------------------------")
-
         num_rows += 1
-        print(f"Total Months: {num_rows}")
+
     
         total += int(row[1])
-        print(f"Total: ${total}")
-        
-    
+
+
+    print("-------------------------")
+    print("Financial Analysis")
+    print("-------------------------")    
+    print(f"Total Months: {num_rows}")
+    print(f"Total: ${total}")
+
     #creating the list
     t= prof_loss
     
@@ -52,6 +53,18 @@ with open (budget_csv) as csvfile:
     print(f"Greatest Increase in Profits: ${great_inc}")
 
     great_dec = min(diff)
-    print(f"greatest Decrease in Profits: ${great_dec}")
+    print(f"Greatest Decrease in Profits: ${great_dec}")
 
 
+f_analysis = os.path.join("Resources", "Analysis.txt")
+
+with open(f_analysis,'w') as text_file:
+
+    print("-------------------------", file = text_file)
+    print("Financial Analysis", file= text_file)
+    print("-------------------------", file= text_file)    
+    print(f"Total Months: {num_rows}", file= text_file)
+    print(f"Total: ${total}", file= text_file)
+    print(f"Average Change: ${round(avg_change,2)}", file= text_file)
+    print(f"Greatest Increase in Profits: ${great_inc}", file= text_file)
+    print(f"Greatest Decrease in Profits: ${great_dec}", file= text_file)
