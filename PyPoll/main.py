@@ -14,12 +14,33 @@ with open (election_csv) as csvfile:
     total = 0
 
     data = list(csvreader)
-    total_votes = [item[0] for item in data]
-    # print(total_votes)
+    total_votes = [item[2] for item in data]
+    print(list(set(total_votes)))
     
     for row in data:
         num_rows += 1
 
-        total += int(row[0])
-
+        # total += str(row[2])
     print(f"Total Votes: {num_rows}")
+    # print(total)
+
+    # col = []
+    # for row in csvreader:
+    #     col.append(row[2])
+    # print(col)
+
+
+
+#     for row in csvreader:
+#         Candidate = str(row[2])
+#         if Candidate == row[2]:
+#             cand_data(row)
+
+# name_count = 0
+
+# def cand_data(cand_stats):
+
+#     name = str(cand_stats[2])
+
+#     name_count += str(name)
+#     print(name)
