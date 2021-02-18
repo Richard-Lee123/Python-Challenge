@@ -12,35 +12,44 @@ with open (election_csv) as csvfile:
 
     num_rows = 0
     total = 0
+    dictt = {}
 
     data = list(csvreader)
-    total_votes = [item[2] for item in data]
-    print(list(set(total_votes)))
+    # total_votes = [item[2] for item in data]
+    # print(list(set(total_votes)))
     
+    # for row in data:
+        # num_rows += 1
+
+    #     # total += str(row[2])
+    # print(f"Total Votes: {num_rows}")
+    # # print(total)
+
+
+
     for row in data:
+
         num_rows += 1
+        if row[2] not in dictt:
+            dictt[row[2]]=0
+        dictt[row[2]] = dictt[row[2]]+1
 
-        # total += str(row[2])
+    # final_list = [{'Candidate': row, 'Votes': dictt[row]} for row in dictt]
+    finalname = [{'Candidate':row}for row in dictt]
+    finalcount = [{'Votes': dictt[row]} for row in dictt]
+    percentage = [{'Perc': dictt[row]/num_rows} for row in dictt]
+    print(finalname)
+    print(finalcount)
+    print(percentage)
     print(f"Total Votes: {num_rows}")
-    # print(total)
+    # print(final_list)
+    print(dictt[row[2]])
+    
+    # holder = 0
 
-    # col = []
-    # for row in csvreader:
-    #     col.append(row[2])
-    # print(col)
+    # def cand_data(cand_stats):
 
+    #     name = str(cand_stats[2])
+    #     can_id = str(cand_stats[0])
+    #     county = str(cand_stats[1])
 
-
-#     for row in csvreader:
-#         Candidate = str(row[2])
-#         if Candidate == row[2]:
-#             cand_data(row)
-
-# name_count = 0
-
-# def cand_data(cand_stats):
-
-#     name = str(cand_stats[2])
-
-#     name_count += str(name)
-#     print(name)
