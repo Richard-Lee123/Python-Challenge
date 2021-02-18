@@ -11,45 +11,29 @@ with open (election_csv) as csvfile:
     # print(csv_header)
 
     num_rows = 0
-    total = 0
     dictt = {}
 
     data = list(csvreader)
-    # total_votes = [item[2] for item in data]
-    # print(list(set(total_votes)))
     
-    # for row in data:
-        # num_rows += 1
-
-    #     # total += str(row[2])
-    # print(f"Total Votes: {num_rows}")
-    # # print(total)
-
-
-
     for row in data:
 
         num_rows += 1
         if row[2] not in dictt:
             dictt[row[2]]=0
         dictt[row[2]] = dictt[row[2]]+1
-
-    # final_list = [{'Candidate': row, 'Votes': dictt[row]} for row in dictt]
-    finalname = [{'Candidate':row}for row in dictt]
-    finalcount = [{'Votes': dictt[row]} for row in dictt]
-    percentage = [{'Perc': dictt[row]/num_rows} for row in dictt]
-    print(finalname)
-    print(finalcount)
-    print(percentage)
+    finalfinal = [{'Candidate':row,'Percentage of votes': f"{round((dictt[row]/num_rows)*100,3)}%", 'Vote Count': dictt[row]}for row in dictt]
     print(f"Total Votes: {num_rows}")
-    # print(final_list)
-    print(dictt[row[2]])
+    print(finalfinal)
     
-    # holder = 0
+    ##breaking down the steps    
+    # final_list = [{'Candidate': row, 'Votes': dictt[row]} for row in dictt]
+    # finalname = [{'Candidate':row}for row in dictt]
+    # finalcount = [{'Votes': dictt[row]} for row in dictt]
+    # percentage = [{'Perc': dictt[row]/num_rows} for row in dictt]
+    # print(final_list)
+    # print(finalname)
+    # print(finalcount)
+    # print(percentage)
 
-    # def cand_data(cand_stats):
 
-    #     name = str(cand_stats[2])
-    #     can_id = str(cand_stats[0])
-    #     county = str(cand_stats[1])
 
