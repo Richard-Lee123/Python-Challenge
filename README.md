@@ -16,7 +16,14 @@ When I opened PyBank the information presented to me was a Date column and a Pro
 ----
 ----
 #### PyPoll
-Working with PyPoll was as similar process as PyBank. What I found to be different and what worked best for me was that I had to create a nested dictionary. This allowed me to see the candidate and what their results where. After this I had to single out each candidate by their percentage of votes to find who was the winner of the election, I also used an if statement for this part of the analysis. Like PyBank I also exported my findings as a txt file in the Resources folder. 
+Working with PyPoll was as similar process as PyBank. What I found to be different and what worked best for me was that I had to create a nested dictionary. This allowed me to see the candidate and what their results where. After this I had to single out each candidate by their percentage of votes to find who was the winner of the election, I also used an if statement for this part of the analysis. Like PyBank I also exported my findings as a txt file in the Resources folder. Below is a screenshot of the txtfile results.
 
 ----
 ![](PyPoll/Resources/PyPoll_Results.png)
+
+
+----
+#### Findings
+In PyBank the company is actually losing money, on average it is not losing money very drastically, but some month it will lose large amounts where other months it will also gain large amounts. For a company the average change isn't hurting it too much, but they are still in the negative, and they will need to change something in order to fix this.
+
+In the PyPoll dataset there was a great turnout for the election. What can be observed is that the winner Khan was able to take the win by a large margin. He won with 63% where the next closest candidate was Correy with only 20%. 
