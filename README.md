@@ -9,3 +9,5 @@ The data source can be found in the Resource folder for each of the dataset. The
 ### Data
 
 #### PyBank
+When I opened PyBank the information presented to me was a Date column and a Profit/Losses column. Using this data I found the Total Months for the dataset, the total amount of money the company has, the average monthly change, and what the greatest increase and decrease in profit was.
+![](PyBank/Resources/Analysis.txt)
